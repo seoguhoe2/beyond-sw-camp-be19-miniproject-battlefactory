@@ -1,6 +1,6 @@
 package battlefactory;
 
-import battlefactory.battle.BattleService;
+import battlefactory.pokemon.BattleService;
 import battlefactory.member.MemberService;
 import battlefactory.pokemon.PokemonService;
 
@@ -23,9 +23,9 @@ public class Application {
         int input = sc.nextInt();
         switch (input) {
             case 1: ms.registMember(); break;
-            case 2: ms.login(); break;
-            case 3: ms.findMemberByNickname(); break;
-            case 4: ms.modifyMember(); break;
+//            case 2: ms.login(); break;
+//            case 3: ms.findMemberByNickname(); break;
+//            case 4: ms.modifyMember(); break;
             case 9: System.out.print("게임을 즐겨주셔서 감사합니다!"); return;
             default:
                 System.out.println("번호가 잘못 입력됐습니다. 다시 입력해주세요!");
