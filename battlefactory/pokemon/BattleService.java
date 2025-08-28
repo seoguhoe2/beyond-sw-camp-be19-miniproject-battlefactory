@@ -1,4 +1,4 @@
-package battlefactory.battle;
+package battlefactory.pokemon;
 
 public class BattleService {
 }

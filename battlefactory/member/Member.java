@@ -3,7 +3,10 @@ package battlefactory.member;
 import battlefactory.member.aggregate.Rank;
 import battlefactory.member.aggregate.UserStatus;
 
-public class Member {
+import java.io.Serializable;
+import java.util.Objects;
+
+public class Member implements Serializable {
     private int memNo;
     private String id;
     private String pwd;
@@ -98,5 +101,17 @@ public class Member {
                 ", totalWins=" + totalWins +
                 ", rank=" + rank +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Member member = (Member) o;
+        return Objects.equals(id, member.id) && Objects.equals(pwd, member.pwd) && Objects.equals(nickname, member.nickname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, pwd, nickname);
     }
 }
